@@ -1,0 +1,130 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - inquire_product
+  - provide_age
+  - provide_skin_tone
+  - provide_race
+  - provide_gender
+  - describe_skin_condition
+
+entities:
+  - age
+  - skin_tone
+  - race
+  - gender
+  - skin_condition
+  
+slots:
+  age:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: age
+  skin_tone:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: skin_tone
+  race:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: race
+  gender:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: gender
+  skin_condition:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: skin_condition
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How can I assist you today?"
+
+  # utter_cheer_up:
+  # - text: "Here is something to cheer you up:"
+  #   image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  # utter_did_that_help:
+  # - text: "Did that help you?"
+
+  # utter_happy:
+  # - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Goodbye! Take care."
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Beiersdorf."
+    
+  utter_ask_age:
+  - text: "To provide personalized recommendations, could you please tell me your age?"
+
+  utter_ask_skin_tone:
+  - text: "What is your skin tone? Please select one of the following options:"
+    buttons:
+      - title: "Fair"
+        payload: "/provide_skin_tone{\"skin_tone\": \"fair\"}"
+      - title: "Medium"
+        payload: "/provide_skin_tone{\"skin_tone\": \"medium\"}"
+      - title: "Dark"
+        payload: "/provide_skin_tone{\"skin_tone\": \"dark\"}"
+
+
+  utter_ask_race:
+  - text: "May I know your race? Please select one of the following options:"
+    buttons:
+      - title: "White"
+        payload: "/provide_race{\"race\": \"White\"}"
+      - title: "Asian"
+        payload: "/provide_race{\"race\": \"Asian\"}"
+      - title: "African American"
+        payload: "/provide_race{\"race\": \"African American\"}"
+      - title: "Hispanic"
+        payload: "/provide_race{\"race\": \"Hispanic\"}"
+
+  utter_ask_gender:
+  - text: "What is your gender? Please select one of the following options:"
+    buttons:
+      - title: "Male"
+        payload: "/provide_gender{\"gender\": \"male\"}"
+      - title: "Female"
+        payload: "/provide_gender{\"gender\": \"female\"}"
+      - title: "Non-binary"
+        payload: "/provide_gender{\"gender\": \"non-binary\"}"
+
+  utter_ask_skin_condition:
+  - text: "Could you please describe your current skin condition or concern?"
+
+  utter_did_that_help:
+  - text: "Did the product recommendation help you?"
+  
+  utter_product_recommendation:
+  - text: "Based on the information you provided, I recommend the following Nivea product: {product_name}"
+    image: "{product_image_url}"
+    buttons:
+      - title: "View Product"
+        url: "{product_url}"
+
+  utter_ask_more_help:
+  - text: "Is there anything else I can assist you with?"
+
+actions:
+  - action_recommend_product
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

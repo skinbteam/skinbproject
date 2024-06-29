@@ -1,0 +1,70 @@
+version: "3.1"
+
+stories:
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+- story: skincare recommendation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inquire_product
+  - action: utter_ask_age
+  - intent: provide_age
+    entities:
+      - age
+  - slot_was_set:
+      - age
+  - action: utter_ask_skin_tone
+  - intent: provide_skin_tone
+    entities:
+      - skin_tone
+  - slot_was_set:
+      - skin_tone
+  - action: utter_ask_race
+  - intent: provide_race
+    entities:
+      - race
+  - slot_was_set:
+      - race
+  - action: utter_ask_gender
+  - intent: provide_gender
+    entities:
+      - gender
+  - slot_was_set:
+      - gender
+  - action: action_recommend_product
+  - action: utter_ask_more_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: more help
+  steps:
+  - action: utter_ask_more_help
+  - intent: affirm
+  - action: utter_ask_age

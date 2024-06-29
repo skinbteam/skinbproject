@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-age",
+      "2": "I-age",
+      "3": "L-age",
+      "4": "U-age",
+      "5": "B-gender",
+      "6": "I-gender",
+      "7": "L-gender",
+      "8": "U-gender",
+      "9": "B-race",
+      "10": "I-race",
+      "11": "L-race",
+      "12": "U-race",
+      "13": "B-skin_condition",
+      "14": "I-skin_condition",
+      "15": "L-skin_condition",
+      "16": "U-skin_condition",
+      "17": "B-skin_tone",
+      "18": "I-skin_tone",
+      "19": "L-skin_tone",
+      "20": "U-skin_tone",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-age": 1,
+      "I-age": 2,
+      "L-age": 3,
+      "U-age": 4,
+      "B-gender": 5,
+      "I-gender": 6,
+      "L-gender": 7,
+      "U-gender": 8,
+      "B-race": 9,
+      "I-race": 10,
+      "L-race": 11,
+      "U-race": 12,
+      "B-skin_condition": 13,
+      "I-skin_condition": 14,
+      "L-skin_condition": 15,
+      "U-skin_condition": 16,
+      "B-skin_tone": 17,
+      "I-skin_tone": 18,
+      "L-skin_tone": 19,
+      "U-skin_tone": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

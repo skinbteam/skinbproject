@@ -1,0 +1,176 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - howdy
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+- intent: inquire_product
+  examples: |
+    - Tell me about your products.
+    - What do you offer?
+    - What products do you have for acne?
+    - Can you recommend a product for my skin condition?
+
+- intent: provide_age
+  examples: |
+    - I am [25](age) years old
+    - My age is [32](age)
+    - I'm [19](age) years old
+    - I am [forty-five](age) years old
+
+- intent: provide_skin_tone
+  examples: |
+    - My skin tone is [fair](skin_tone)
+    - I have [dark](skin_tone) skin
+    - My skin is [medium](skin_tone) toned
+    - I have a [light](skin_tone) complexion
+    
+- intent: provide_race
+  examples: |
+    - I am [White](race)
+    - My race is [Asian](race)
+    - I belong to the [African American](race) race
+    - I am [Hispanic](race)
+
+- intent: provide_gender
+  examples: |
+    - I am [female](gender)
+    - My gender is [male](gender)
+    - I identify as [non-binary](gender)
+    - I am a [woman](gender)
+    
+
+- intent: describe_skin_condition
+  examples: |
+    - I have [acne](skin_condition) on my face
+    - I am experiencing [dryness](skin_condition) on my skin
+    - My skin is [oily](skin_condition) and prone to breakouts
+    - I have [sensitive](skin_condition) skin
+
+
+
+# - intent: inquire_product
+#   examples: |
+#     - are you a bot?
+#     - are you a human?
+#     - am I talking to a bot?
+#     - am I talking to a human?
+
+
+# - intent: inquire_skin_type
+#   examples: |
+#     - are you a bot?
+#     - are you a human?
+#     - am I talking to a bot?
+#     - am I talking to a human?
+
+
+# - intent: inquire_age
+#   examples: |
+#     - are you a bot?
+#     - are you a human?
+#     - am I talking to a bot?
+#     - am I talking to a human?
+
+
+# - intent: inquire_gender
+#   examples: |
+#     - are you a bot?
+#     - are you a human?
+#     - am I talking to a bot?
+#     - am I talking to a human?
+
+
+# - intent: inquire_race
+#   examples: |
+#     - are you a bot?
+#     - are you a human?
+#     - am I talking to a bot?
+#     - am I talking to a human?

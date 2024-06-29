@@ -1,0 +1,11 @@
+[
+    {
+      "prompt": "Hi",
+      "response": "Chatbot response 1"
+    },
+    {
+      "prompt": "User prompt 2",
+      "response": "Chatbot response 2"
+    },
+    ...
+  ]
